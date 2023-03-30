@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Poc.UnitTests.Business\Poc.UnitTests.Business.csproj" />
+    <ProjectReference Include="..\Poc.UnitTests.DTOs\Poc.UnitTests.DTOs.csproj" />
+  </ItemGroup>
+
+</Project>
