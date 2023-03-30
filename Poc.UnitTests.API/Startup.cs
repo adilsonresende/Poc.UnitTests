@@ -7,6 +7,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Poc.UnitTests.Business;
+using Poc.UnitTests.Business.Interfaces;
+using Poc.UnitTests.Repository;
+using Poc.UnitTests.Repository.Interfaces;
+using Poc.UnitTests.Services;
+using Poc.UnitTests.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +38,9 @@ namespace Poc.UnitTests.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Poc.UnitTests.API", Version = "v1" });
             });
+            services.AddScoped<IClienteServices, ClienteServices>();
+            services.AddScoped<IClienteBusiness, ClienteBusiness>();
+            services.AddScoped<IClienteRepository, ClienteRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
